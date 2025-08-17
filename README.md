@@ -1,7 +1,25 @@
 # Books OS
+A zoomable, bookshelf-native personal OS. Books → Chapters → Sections. Drag spines, rearrange between-drop zones, thick binder stacks, right-side drawer for chapters, localStorage persistence.
 
 **Books OS** is a tactile, 3D bookshelf interface that replaces “files & folders” with **Sections → Books → Chapters**.  
 Drag between spines, drop precisely between chapters, stack oversized binders, and glide through your life like a library.
+
+## Quick start
+```bash
+npm create vite@latest books-os -- --template react-ts
+cd books-os
+# replace the generated files with the files in this scaffold
+npm i
+npm run dev
+```
+
+## Deploy
+- **Vercel**: Import the repo, framework: Vite → Deploy.
+- **GitHub Pages**: enable Pages on `Settings → Pages → GitHub Actions`, keep this workflow.
+
+## Notes
+- Add `public/wallpaper.jpg` for desktop feel.
+- Swap localStorage for Supabase/Firebase when you want sync.
 
 ## Vision
 - **Simplicity first:** your stuff looks and feels like a shelf.
