@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wallpaper */
+body {
+  background-image: radial-gradient(40rem 20rem at 10% 0%, rgba(0,0,0,0.04), transparent), url('/wallpaper.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Drawer animation */
+.drawer-enter { transform: translateX(100%); opacity: 0; }
+.drawer-enter-active { transform: translateX(0%); opacity: 1; transition: all 160ms ease; }
+.drawer-exit { transform: translateX(0%); opacity: 1; }
+.drawer-exit-active { transform: translateX(100%); opacity: 0; transition: all 140ms ease; }
