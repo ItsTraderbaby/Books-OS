@@ -14,3 +14,44 @@ body {
 .drawer-enter-active { transform: translateX(0%); opacity: 1; transition: all 160ms ease; }
 .drawer-exit { transform: translateX(0%); opacity: 1; }
 .drawer-exit-active { transform: translateX(100%); opacity: 0; transition: all 140ms ease; }
+
+/* 3D Library Styles */
+.library-3d {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.shelf-end {
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shelf-end:hover {
+  transform: translateY(-4px) rotateY(-5deg);
+}
+
+.shelf-end.selected {
+  transform: translateZ(50px) rotateY(-15deg) scale(1.1);
+}
+
+.shelf-depth {
+  background: linear-gradient(90deg, 
+    rgba(0,0,0,0.1) 0%, 
+    rgba(0,0,0,0.2) 50%, 
+    rgba(0,0,0,0.3) 100%
+  );
+}
+
+.book-spine-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+}
+
+.book-spine-3d:hover {
+  transform: translateY(-2px) rotateY(5deg);
+}
+
+/* Custom gradient utilities */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
